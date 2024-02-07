@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    justify-content: center;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 1rem;
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid var(--clr-main);
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 7px 10px 10px var(--clr-main);
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.item h1 {
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.item:hover h1 {
+    opacity: 0;
+    font-size: 40px;
+    color: black
+}
+
+.item:hover {
+    box-shadow: 20px 20px 14px 16 var(--clr-main);
+}
+
+.item:hover img {
+    width: 100%;
+    filter: grayscale(0%);
+}
+
+
+.item img {
+    transition: 0.5s;
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+
+    filter: grayscale(60%);
+}
+
+
+
+:root {
+    --clr-main: #380c88;
+    --clr: red;
+}

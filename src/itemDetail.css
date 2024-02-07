@@ -1,0 +1,41 @@
+.container-detail {
+    padding-top: 2rem;
+    display: flex;
+
+    justify-content: center;
+}
+
+.container-general {
+    border: 1px solid black;
+    width: 60rem;
+    height: 28rem;
+    background-color: green;
+    justify-content: left;
+
+}
+
+.imagen-grande {
+    display: flex;
+    margin: 2rem;
+    width: 25rem;
+    height: 17rem;
+    background-color: red;
+}
+
+.imagen-grande img {
+    width: 100%;
+}
+
+.contenedor-imagen-chicas {
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    margin: 2rem;
+    justify-content: space-between;
+}
+
+.imagen-chica {}
+
+.imagen-chica img {
+    width: 100px;
+}
