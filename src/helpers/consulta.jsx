@@ -4,7 +4,6 @@ import { Links } from "./link";
 export const Consulta = ({ params, aUsar }) => {
 
     const [datos, setDatos] = useState();
-    console.log("params ", params, " aUsar ", aUsar);
     const link = Links();
 
     switch (params) {

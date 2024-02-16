@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import '../main.css';
 const images = [
     require('../img/pokemon.png'),
     require('../img/rick.png'),

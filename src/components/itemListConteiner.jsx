@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-
+import styles from "../itemList.module.css";
 import { ItemList } from "./itemList";
 import { Consulta } from "../helpers/consulta";
 

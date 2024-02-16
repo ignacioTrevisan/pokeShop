@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { HandleScroll } from "../helpers/handleScroll";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/cartContext";
+import styles from "../navbar.module.css";
+import { IdentificadorArrayContext } from "../context/IdentificadorArrayContext";
 
 const images = [
     require('../img/navbar/home.png'),
@@ -14,6 +17,8 @@ export const Navbar = () => {
     useEffect(() => {
         setNav(document.querySelector(".navbar"))
     }, [])
+    const { identificadorArray, setIdentificadorArray } = useContext(IdentificadorArrayContext)
+    const { carrito, setCarrito } = useContext(CartContext);
 
     useEffect(() => {
         if (nav) {
@@ -26,8 +31,10 @@ export const Navbar = () => {
     const mostrarNav = () => {
         if (scroll > 20) {
             nav.style.opacity = "0";
+            console.log(scroll);
         } else {
             nav.style.opacity = "1";
+            console.log(scroll);
         }
     }
 
@@ -35,11 +42,11 @@ export const Navbar = () => {
 
     return (
 
-        <nav className="navbar">
-            <a href="#" className="logo" ></a>
-            <ul className="menu">
+        <nav className={styles.navbar}>
+            <a href="#" className={styles.logo}></a>
+            <ul className={styles.menu}>
                 <Link to="/">
-                    <li className="izquierda">
+                    <li className={styles.izquierda}>
                         <Link to="/">
                             <img src={images[0]} />
                             <span>Inicio</span>
@@ -47,10 +54,10 @@ export const Navbar = () => {
                     </li>
                 </Link>
                 <Link to="/carrito">
-                    <li style={{ "--clr": "#fff200" }}>
+                    <li style={{ "--clr": "#fff200" }} onClick={() => setIdentificadorArray(0)}>
                         <Link to="/carrito">
                             <img src={images[1]} />
-                            <span>Carrito</span>
+                            <span>Carrito({carrito.length})</span>
                         </Link>
                     </li>
                 </Link>
@@ -71,7 +78,7 @@ export const Navbar = () => {
                     </li>
                 </Link>
             </ul>
-        </nav >
+        </nav>
 
     )
 }
