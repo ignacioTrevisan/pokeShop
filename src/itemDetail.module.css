@@ -1,7 +1,14 @@
+body {
+    overflow-y: hidden;
+
+}
+
 .container_detail {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
+
+
 }
 
 .container_general {

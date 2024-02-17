@@ -40,12 +40,13 @@ img {
 
 .navbar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-main);
     border-top: 3px solid black;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
     width: 100%;
     height: 120px;
 }
